@@ -1,12 +1,7 @@
 package dev.coms4156.project.individualproject;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 /**
  * This class represents a file-based database containing department mappings.
@@ -93,13 +88,9 @@ public class MyFileDatabase {
     return result.toString();
   }
 
-  /**
-   * The path to the file containing the database entries.
-   */
+  /** The path to the file containing the database entries. */
   private String filePath;
 
-  /**
-   * The mapping of department names to Department objects.
-   */
+  /** The mapping of department names to Department objects. */
   private HashMap<String, Department> departmentMapping;
 }

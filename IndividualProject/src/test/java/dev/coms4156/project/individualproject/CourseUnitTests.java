@@ -26,9 +26,7 @@ public class CourseUnitTests {
     assertEquals(expectedResult, testCourse.toString());
   }
 
-  /**
-   * The test course instance used for testing.
-   */
+  /** The test course instance used for testing. */
   public static Course testCourse;
 }
 
