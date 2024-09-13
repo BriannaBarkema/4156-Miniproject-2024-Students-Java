@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 /**
- * File used to run unit tests for the Course class.
+ * Unit tests for the Course class.
  */
 @SpringBootTest
 @ContextConfiguration
