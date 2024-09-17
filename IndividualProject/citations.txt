@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/11063102/using-locales-with-javas-tolowercase-and-touppercase
+https://stackoverflow.com/questions/12147297/how-do-i-assert-equality-on-two-classes-without-an-equals-method
