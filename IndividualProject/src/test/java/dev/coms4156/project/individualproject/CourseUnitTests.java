@@ -1,11 +1,13 @@
 package dev.coms4156.project.individualproject;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit tests for the Course class.
@@ -28,7 +30,7 @@ public class CourseUnitTests {
   }
 
   @Test
-  public void enrollStudentTest(){
+  public void enrollStudentTest() {
     testCourse.setEnrolledStudentCount(0);
     assertTrue(testCourse.enrollStudent());
     testCourse.setEnrolledStudentCount(255);
@@ -36,7 +38,7 @@ public class CourseUnitTests {
   }
 
   @Test
-  public void dropStudentTest(){
+  public void dropStudentTest() {
     testCourse.setEnrolledStudentCount(0);
     assertFalse(testCourse.dropStudent());
     testCourse.setEnrolledStudentCount(250);
@@ -44,25 +46,25 @@ public class CourseUnitTests {
   }
 
   @Test
-  public void setGetCourseLocationTest(){
+  public void setGetCourseLocationTest() {
     testCourse.reassignLocation("Pupin");
     assertEquals("Pupin", testCourse.getCourseLocation());
   }
 
   @Test
-  public void setGetInstructorTest(){
+  public void setGetInstructorTest() {
     testCourse.reassignInstructor("Cheryl");
     assertEquals("Cheryl", testCourse.getInstructorName());
   }
 
   @Test
-  public void setGetCourseTimeSlotTest(){
+  public void setGetCourseTimeSlotTest() {
     testCourse.reassignTime("12:00am");
     assertEquals("12:00am", testCourse.getCourseTimeSlot());
   }
 
   @Test
-  public void isCourseFullTest(){
+  public void isCourseFullTest() {
     testCourse.setEnrolledStudentCount(250);
     assertTrue(testCourse.isCourseFull());
     testCourse.setEnrolledStudentCount(5);
@@ -71,7 +73,9 @@ public class CourseUnitTests {
     assertTrue(testCourse.isCourseFull());
   }
 
-  /** The test course instance used for testing. */
+  /**
+   * The test course instance used for testing.
+   */
   public static Course testCourse;
 }
 

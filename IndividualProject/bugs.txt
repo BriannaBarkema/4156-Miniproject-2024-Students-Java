@@ -1,0 +1,46 @@
+Bugs found during testing:
+Fixed always false return value and increment logic for enrollStudent() in Course.java
+
+Fixed always false return value and increment logic for dropStudent() in Course.java
+
+Fixed return for getCourseLocation() in Course.java
+
+Fixed return for getInstructorName() in Course.java
+
+Fixed wrong comparison for isCourseFull() in Course.java
+
+Fixed wrong sign for getNumberOfMajors() in Department.java
+
+Fixed literal return for getDepartmentChair() in Department.java
+
+Fixed increment logic for dropPersonFromMajor() in Department.java
+
+Fixed literal return for toString() in Department.java
+
+Fixed wrong HttpStatus for retrieveDepartment() in RouteController.java
+
+Fixed wrong HttpStatus for retrieveCourse() in RouteController.java
+
+Fixed wrong sign for getMajorCtFromDept() in RouteController.java
+
+Fixed response body string for findCourseTime() in RouteController.java
+
+Bugs found by PMD:
+MissingOverride:	The method 'toString()' is missing an @Override annotation.
+    Fixed in Course.java, Department.java
+
+LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
+    Fixed in Department.java and MyFileDatabase.java, RouteController.java, RouteControllerUnitTests
+    .java, IndividualProjectApplication.java
+
+UnnecessaryAnnotationValueElement:	Avoid the use of value in annotations when its the only element
+    Fixed in RouteController.java
+
+IndividualProjectApplication.java:41:	LiteralsFirstInComparisons:	Position literals first in String comparisons
+    Fixed in IndividualProjectApplication.java
+
+ReturnEmptyCollectionRatherThanNull:	Return an empty collection rather than null.
+    Fixed in MyFileDatabase.java
+
+UseLocaleWithCaseConversions:	When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+    Fixed in RouteController.java
